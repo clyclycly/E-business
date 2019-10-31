@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot');
+    src: url('fonts/icomoon.eot#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf') format('truetype'),
+    url('fonts/icomoon.woff') format('woff'),
+    url('fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="fa-"], [class*=" fa-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-angle-down:before {
+    content: "\e900";
+}
+
+.fa-angle-left:before {
+    content: "\e901";
+}
+
+.fa-angle-right:before {
+    content: "\e902";
+}
+
+.fa-angle-up:before {
+    content: "\e903";
+}
+
+.fa-check-square:before {
+    content: "\e904";
+}
+
+.fa-close:before {
+    content: "\e905";
+}
+
+.fa-eye:before {
+    content: "\e906";
+}
+
+.fa-minus:before {
+    content: "\e907";
+}
+
+.fa-minus-square:before {
+    content: "\e908";
+}
+
+.fa-plus:before {
+    content: "\e909";
+}

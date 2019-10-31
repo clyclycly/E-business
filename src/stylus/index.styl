@@ -1,0 +1,329 @@
+@import "./var.styl"
+/* 预定义 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input
+  margin 0
+  padding 0
+  border 0
+  // normal is 400
+  font-weight normal
+  vertical-align baseline
+
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section
+  display block
+
+blockquote, q
+  quotes none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+  content none
+
+table
+  border-collapse collapse
+  border-spacing 0
+
+a
+  color $cText2
+  -webkit-backface-visibility hidden
+  text-decoration none
+
+body
+  // 让文字可以与12px
+  -webkit-text-size-adjust none
+  // 苹果点击时颜色
+  -webkit-tap-highlight-color $cText1
+
+body, html, textarea
+  line-height 1
+  font-family 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback'
+  user-select none
+  -webkit-tap-highlight-color transparent // 苹果点击半透明
+  color $cText1
+
+button
+  width 100%
+  height 100%
+  display block
+  border 0
+  font-size inherit
+  border-radius inherit
+  color inherit
+  background-color inherit
+
+li
+  list-style none
+
+input
+  -webkit-appearance none // 去除苹果默认
+  border-radius 0 // 去除苹果圆角
+  color $cText2
+  line-height 1 // 从父盒子继承则为line-height
+  outline medium // 去掉发光
+  box-sizing border-box
+  padding-left 1em // （不能使用 text-indent 1em） 原因ios:textarea：placeholde不能缩进，ios虽然可以兼容input标签，但是有一点默认距离。
+  border 0
+  width 100%
+
+textarea
+  -webkit-appearance none // 去除苹果默认
+  border-radius 0 // 去除苹果圆角
+  color $cLine2
+  resize none // 去掉右下角
+  outline medium //去掉发光
+  padding 0
+  box-sizing border-box
+  padding-left 1em // （不能使用 text-indent 1em） 原因ios：placeholde不能缩进
+  border 0
+  width 100%
+
+input[type="button"], input[type="submit"], input[type="reset"]
+  -webkit-appearance none /* 去除苹果默认*/
+  width 100%
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder // WebKit browsers
+  // input默认颜色
+  color $cLine2
+
+input::-moz-placeholder, textarea::-moz-placeholder /* Mozilla Firefox 4 to 18 */
+  color $cLine2
+
+input::-moz-placeholder, textarea::-moz-placeholder /* Mozilla Firefox 19+ */
+  color $cLine2
+
+input::-ms-input-placeholder, textarea::-moz-placeholder /* Internet Explorer 10+ */
+  color $cLine2
+
+/* Ban chrome series pull-to-refresh（下拉刷新） */
+#app
+  touch-action none
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*  */
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* clearFix（清除浮动） */
+.--clear-fix:before, .--clear-fix:after
+  content ""
+  display table
+
+.--clear-fix:after
+  clear both
+
+.--clear-fix
+  _zoom 1
+
+.--no-wrap
+  white-space nowrap
+  text-overflow ellipsis
+  overflow hidden
+
+/* line */
+.--line-top
+  border-top 1px solid $cLine1
+
+.--line-right
+  border-right 1px solid $cLine1
+
+.--line-bottom
+  border-bottom 1px solid $cLine1
+
+.--line-left
+  border-left 1px solid $cLine1
+
+/* font */
+.--fs0
+  font-size 0
+
+.--fs12
+  font-size 12px
+
+.--fs14
+  font-size 14px
+
+.--fs16
+  font-size 16px
+
+.--fs18
+  font-size 18px
+
+.--fs20
+  font-size 20px
+
+/* box model */
+.--h1
+  height 1px
+
+.--h10
+  height 10px
+
+.--h20
+  height 20px
+
+.--h30
+  height 30px
+
+.--h40
+  height 40px
+
+.--h50
+  height 50px
+
+.--h60
+  height 60px
+
+.--h70
+  height 70px
+
+.--h80
+  height 80px
+
+.--h90
+  height 90px
+
+.--h100
+  height 100px
+
+.--mb1
+  margin-bottom 1px
+
+.--mb10
+  margin-bottom 10px
+
+.--mb20
+  margin-bottom 20px
+
+.--mb30
+  margin-bottom 30px
+
+.--mb40
+  margin-bottom 40px
+
+.--mb50
+  margin-bottom 50px
+
+.--mb60
+  margin-bottom 60px
+
+.--mb70
+  margin-bottom 70px
+
+.--mb80
+  margin-bottom 80px
+
+.--mb90
+  margin-bottom 90px
+
+.--mb100
+  margin-bottom 100px
+
+.--mt1
+  margin-top 1px
+
+.--mt10
+  margin-top 10px
+
+.--mt20
+  margin-top 20px
+
+.--mt30
+  margin-top 30px
+
+.--mt40
+  margin-top 40px
+
+.--mt50
+  margin-top 50px
+
+.--mt60
+  margin-top 60px
+
+.--mt70
+  margin-top 70px
+
+.--mt80
+  margin-top 80px
+
+.--mt90
+  margin-top 90px
+
+.--mt100
+  margin-top 100px
+
+.--pt1
+  padding-top 1px
+
+.--pt10
+  padding-top 10px
+
+.--pt20
+  padding-top 20px
+
+.--pt30
+  padding-top 30px
+
+.--pt40
+  padding-top 40px
+
+.--pt50
+  padding-top 50px
+
+.--pt60
+  padding-top 60px
+
+.--pt70
+  padding-top 70px
+
+.--pt80
+  padding-top 80px
+
+.--pt90
+  padding-top 90px
+
+.--pt100
+  padding-top 100px
+
+.--pb1
+  padding-bottom 1px
+
+.--pb10
+  padding-bottom 10px
+
+.--pb20
+  padding-bottom 20px
+
+.--pb30
+  padding-bottom 30px
+
+.--pb40
+  padding-bottom 40px
+
+.--pb50
+  padding-bottom 50px
+
+.--pb60
+  padding-bottom 60px
+
+.--pb70
+  padding-bottom 70px
+
+.--pb80
+  padding-bottom 80px
+
+.--pb90
+  padding-bottom 90px
+
+.--pb100
+  padding-bottom 100px
